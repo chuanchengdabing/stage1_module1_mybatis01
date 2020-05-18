@@ -1,0 +1,14 @@
+<mapper namespace="animal">
+
+    <!--sql语句:
+        sql语句的唯一标识是：namespace.id组成
+    -->
+    <select id="selectList" resultType="com.pojo.Animal">
+        select * from animal
+    </select>
+
+    <select id="selectOne" resultType="com.pojo.Animal" paramterType="com.pojo.Animal">
+        select * from animal where id=#{id} and name=#{name}
+    </select>
+
+</mapper>
